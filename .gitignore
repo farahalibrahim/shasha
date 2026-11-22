@@ -1,0 +1,42 @@
+# Gradle
+.gradle/
+build/
+
+# Kotlin
+.kotlin/
+
+# Local configuration
+local.properties
+
+# Signing keys
+*.jks
+*.keystore
+*.p12
+
+# Build outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+*.msi
+*.exe
+out/
+gen/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Logs
+*.log
+hs_err_pid*
+*.hprof
+
+# IDE: IntelliJ / Android Studio (shared run configurations are not kept)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,64 @@
+name: Bug report
+description: Something in Shasha does not work as it should
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please do not include sign-in details or links to copyrighted content. Security problems should go through private vulnerability reporting, see SECURITY.md.
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device type
+      options:
+        - Phone
+        - Tablet
+        - Android TV
+        - Windows
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Shown in About
+    validations:
+      required: true
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Channel
+      options:
+        - Beta
+        - Stable
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag images or screen recordings into this box.
+    validations:
+      required: false

@@ -1,0 +1,51 @@
+name: Feature request
+description: Suggest an idea for Shasha
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device type
+      description: Where would you use this?
+      options:
+        - Phone
+        - Tablet
+        - Android TV
+        - Windows
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Shown in About
+    validations:
+      required: true
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Channel
+      options:
+        - Beta
+        - Stable
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected versus actual
+      description: Describe what you would like to happen, and what happens today.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or sketches
+    validations:
+      required: false
