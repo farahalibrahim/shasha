@@ -7,13 +7,21 @@ body:
       value: |
         Thanks for reporting. Please do not include sign-in details or links to copyrighted content. Security problems should go through private vulnerability reporting, see SECURITY.md.
   - type: dropdown
-    id: device
+    id: release_type
     attributes:
-      label: Device type
+      label: Release type
+      description: Which kind of release are you using? Beta is the pre-release channel (Settings, Beta updates).
       options:
-        - Phone
-        - Tablet
-        - Android TV
+        - Beta
+        - Stable
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android
         - Windows
     validations:
       required: true
@@ -21,22 +29,22 @@ body:
     id: version
     attributes:
       label: App version
-      description: Shown in About
+      description: Shown in Settings, System, About (for example 1.0.0-beta.6)
+      placeholder: 1.0.0-beta.6
     validations:
-      required: true
-  - type: dropdown
-    id: channel
+      required: false
+  - type: input
+    id: device
     attributes:
-      label: Channel
-      options:
-        - Beta
-        - Stable
+      label: Device type
+      description: Optional. For example phone, tablet, Android TV, laptop, and the model if you know it.
     validations:
-      required: true
+      required: false
   - type: textarea
-    id: steps
+    id: description
     attributes:
-      label: Steps to reproduce
+      label: Description
+      description: What happened, and the steps to make it happen again.
       placeholder: |
         1. Open ...
         2. Tap ...
@@ -47,18 +55,13 @@ body:
     id: expected
     attributes:
       label: Expected behaviour
-    validations:
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual behaviour
+      description: What you thought would happen.
     validations:
       required: true
   - type: textarea
     id: screenshots
     attributes:
       label: Screenshots
-      description: Drag images or screen recordings into this box.
+      description: Optional. Drag images or screen recordings into this box.
     validations:
       required: false
